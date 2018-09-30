@@ -1,3 +1,20 @@
+/* 
+Rosy is a theme for LuCI. It is based on luci-theme-bootstrap
+
+luci-theme-rosy
+    Copyright 2018 Rosy Song <rosysong@rosinson.com>
+    Copyright 2018 Yan Lan Shen <yanlan.shen@rosinson.com>
+
+Have a bug? Please create an issue here on GitHub!
+    https://github.com/rosywrt/luci-theme-rosy/issues
+
+luci-theme-bootstrap:
+Copyright 2008 Steven Barth <steven@midlink.org>
+Copyright 2008 Jo-Philipp Wich <jow@openwrt.org>
+Copyright 2012 David Menting <david@nut-bolt.nl>
+
+Licensed to the public under the Apache License 2.0 
+*/
 @font-face {
   font-family: icomoon;
   src: url(fonts/font.eot);
