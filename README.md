@@ -1,16 +1,18 @@
-# OpenWrt luci feed
+# RosyWrt luci feed
 
 [![Translation status](https://hosted.weblate.org/widgets/openwrt/-/svg-badge.svg)](https://hosted.weblate.org/engage/openwrt/?utm_source=widget)
 
 ## Description
 
-This is the OpenWrt "luci"-feed containing LuCI - OpenWrt Configuration Interface.
+NOTE: This is the RosyWrt "luci"-feed based on [LuCI](https://github.com/openwrt/luci). And it was merged upstream now. Try the [luci-theme-rosy](https://github.com/rosywrt/luci-theme-rosy) if your luci version is **openwrt-18.06** branch.
 
 ## Usage
 
+**[Generally]**
+
 This feed is enabled by default. Your feeds.conf.default (or feeds.conf) should contain a line like:
 ```
-src-git luci https://github.com/openwrt/luci.git
+src-git luci https://github.com/rosywrt/luci.git
 ```
 
 To install all its package definitions, run:
@@ -19,25 +21,26 @@ To install all its package definitions, run:
 ./scripts/feeds install -a -p luci
 ```
 
-## API Reference
+**[Openwrt-18.06 only]**
 
-You can browse the generated API documentation directly on Github.
+Make your feeds.conf.default file like this if your bsp is openwrt-18.06 branch.
+```
+src-git rosy https://github.com/rosywrt/luci-theme-rosy.git;openwrt-18.06
+```
 
- - [Server side Lua APIs](http://openwrt.github.io/luci/api/index.html)
- - [Client side JavaScript APIs](http://openwrt.github.io/luci/jsapi/index.html)
+## Contact
+* Bug Report : https://github.com/rosywrt/luci/issues
 
-## Development
-
-Documentation for developing and extending LuCI can be found [in the Wiki](https://github.com/openwrt/luci/wiki)
+* QQ Gourp : 428742246
 
 ## License
 
 See [LICENSE](LICENSE) file.
- 
-## Package Guidelines
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) file.
+## References
+* API [documentation](http://htmlpreview.github.io/?http://raw.githubusercontent.com/openwrt/luci/master/documentation/api/index.html).
 
-## Translation status
+* Development [Wiki](https://github.com/openwrt/luci/wiki).
 
-[![Translation status](https://hosted.weblate.org/widgets/openwrt/-/multi-auto.svg)](https://hosted.weblate.org/engage/openwrt/?utm_source=widget)
+* Package [Guidelines](CONTRIBUTING.md) file.
+
