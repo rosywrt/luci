@@ -42,7 +42,9 @@
 							<%= msg or translate("Changes applied.") %>
 						</div>
 						<div>
-							<img src="<%=resource%>/icons/loading.gif" alt="<%:Loading%>" style="vertical-align:middle" />
+							<div class="bar-container">
+								<div class="bar"></div>
+							</div>
 							<%:Waiting for changes to be applied...%>
 						</div>
 					</div>
@@ -50,4 +52,23 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+		
+		window.onload = function () {
+			var rnd = 0,timeout = '';
+			var bar = document.getElementsByClassName('bar-container')[0].getElementsByClassName('bar')[0];
+			function run(){
+				bar.style.width = rnd + '%';
+				bar.style.transition = 'width linear 5s';
+				rnd += parseInt(Math.random() * 3 + 3);
+				if( rnd >= 99 ){
+					window.clearTimeout(timeout);
+					bar.style.width = '99%';
+					return ;
+				}
+				timeout = window.setTimeout(run, 5000);
+			}
+			run();
+		}	
+	</script>
 </html>
