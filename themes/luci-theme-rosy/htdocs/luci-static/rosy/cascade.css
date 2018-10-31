@@ -108,6 +108,7 @@ strong {
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    position: relative;
 }
 
 body {
@@ -118,7 +119,8 @@ body {
 html, body {
     margin: 0px;
     padding: 0px;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     font-family: Microsoft Yahei, WenQuanYi Micro Hei, sans-serif, "Helvetica Neue", Helvetica, Hiragino Sans GB;
 }
 
@@ -241,6 +243,15 @@ h4 {
     padding-bottom: 10px;
 }
 
+.mobile-hide {
+    display: inline-block;
+}
+
+.PC-hide {
+    width: 100%;
+    display: none;
+}
+
 .cbi-section {
     margin: 1rem 0 0 0;
     padding: 2rem;
@@ -337,7 +348,7 @@ div > .table > .tbody > .tr:nth-of-type(2n) {
     border-radius: 20px;
     overflow: hidden;
     border: none !important;
-    background-color: #468ea485;
+    background-color: #9bc1cc;
 }
 
 .cbi-section .table #memtotal > div > div > div, 
@@ -538,6 +549,7 @@ td > table > tbody > tr > td,
 .container .cbi-map .cbi-tabmenu + div {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    overflow: hidden;
 }
 
 .tabs {
@@ -1103,6 +1115,9 @@ td > .ifacebadge,
     overflow: hidden;
     border-radius: 20px;
 }
+#iwsvg, #bwsvg {
+    margin-top: 1rem;
+}
 
 .ifacebox {
     background-color: #f9f9f9;
@@ -1503,7 +1518,30 @@ header > .container > .pull-right > * {
 }
 
 /* applyreboot fix */
-
+#maincontainer {
+    text-align: center;
+}
+#maincontainer > #maincontent {
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 800px;
+    width: 40%;
+}
+#applyreboot-container {
+    margin-bottom: 1rem;
+}
+#applyreboot-section {
+    text-align: left;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+#applyreboot-section > div {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
 #applyreboot-container {
 	margin: 90px 2rem 2rem 2rem;
 }
@@ -1514,10 +1552,12 @@ header > .container > .pull-right > * {
 }
 
 #applyreboot-section .bar-container {
+    margin: .5rem 0 .2rem;
     background: transparent;
-    height: 20px;
+    height: 10px;
     border: 1px solid #b7b7b7;
     border-radius: 20px;
+    overflow: hidden;
 }
 #applyreboot-section .bar-container .bar {
     background: #F24C7C;
@@ -1526,10 +1566,6 @@ header > .container > .pull-right > * {
 }
 
 /* Shared style */
-header, .main {
-    width: 100%;
-    position: absolute;
-}
 header {
     height: 70px;
     position: fixed;
@@ -1700,7 +1736,7 @@ header .logout a {
 
 footer {
     text-align: right;
-    padding: 1rem;
+    padding-right: 1rem;
     color: #aaa;
     font-size: 0.8rem;
     text-shadow: 0px 0px 2px #BBB;
@@ -1714,7 +1750,6 @@ footer {
 /* The style of the prompt message */
 .alert-message {
     padding: 20px 15%;
-    border: 1px solid #4A5368;
     border-radius: 10px;
     background-color: #FFF;
 }
@@ -1760,11 +1795,16 @@ footer {
 
 
 /* All styles of the login interface */
+.node-main-login {
+    height: auto;
+    min-height: 100%;
+    background: #fff url(./loginBG.png) no-repeat center center / cover;
+}
 .node-main-login header {
     display: none;
 }
 .node-main-login .main {
-    height: 100%;
+    height: auto;
 }
 .node-main-login > .main > .main-left {
     display: none;
@@ -1772,24 +1812,22 @@ footer {
 
 .node-main-login > .main > .main-right {
     width: 100%;
-    height: 100%;
-    background: #fff url(./loginBG.png) no-repeat center center / cover;
+    height: auto;
+    min-height: 100%;
 }
 
 .node-main-login > .main #maincontent {
+    padding: 3rem 0 2rem;
     width: 100%;
-    height: 100%;
+    height: auto;
     text-align: center;
 }
 
 .node-main-login > .main .container {
+    padding: 0;
     width: 30%;
     max-width: 600px;
     display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
 }
 
 .node-main-login > .main .logoImg a {
@@ -1801,15 +1839,15 @@ footer {
 }
 
 .node-main-login .warning {
-    background-color:  #3f4a62;
-    color: #E9E4E4;
+    background-color: #3E4A62;
+    color: #fff;
 }
 
 .node-main-login > .main form h2 {
     margin: 20px 0 16px;
     padding: 0;
     font-size: 24px;
-    color: #FFFFFC;
+    color: #fff;
     font-weight: normal;
     border: 0;
 }
@@ -1916,6 +1954,7 @@ footer {
 /* Interface after login */
 .logged-in .main {
     background-color: #EBF1F6;
+    overflow: hidden;
 }
 .logged-in .main-right {
     padding: 0 1rem 3rem 0;
@@ -1964,12 +2003,7 @@ footer {
     width: auto;
     border: none;
     background-color: #468EA4;
-}
-
-@media screen and (max-height: 580px) {
-    .logoImg img {
-        height: 48px;
-    }
+    color: #fff;
 }
 
 @media screen and (max-width: 1600px) {
@@ -2049,7 +2083,9 @@ footer {
         position: fixed;
         z-index: 100;
         right: 100%;
+        left: 0;
         top: 0;
+        bottom: 0;
         background: #0000007d;
         border-radius: 0;
         min-width: 0;
@@ -2067,9 +2103,6 @@ footer {
 
     .node-main-login > .main .container {
         width: 60%;
-    }
-    .node-main-login .main {
-        background: #354057;
     }
 
     .showSide {
@@ -2254,13 +2287,19 @@ footer {
 
 
 @media screen and (max-width: 768px) {
-    .node-main-login > .main > .main-right {
-        background: #354057;
+    .node-main-login {
+        background: none;
     }
 
     .node-main-login > .main .logoImg a {
-        font-size: 18px;
-        margin: 0 0 10px 0;
+        font-size: 30px;
+        margin: 12px 0 22px 0;
+        color: #354057;
+    }
+
+    .node-main-login > .main #maincontent {
+        padding-top: 0;
+        padding-bottom: 1rem;
     }
 
     .alert-message {
@@ -2282,13 +2321,20 @@ footer {
         margin-top: 8px;
     }
 
+    .node-main-login .warning {
+        background-color: #F5F5F6;
+        color: #354057;
+    }
+
+    .alert-message a {
+        color: #f24c7c;
+        background: #fff;
+    }
+
     .node-main-login > .main form h2 {
         font-size: 16px;
         margin: 20px 0 16px;
-    }
-
-    .node-main-login > .main .container {
-        min-width: 90%;
+        color: #354057;
     }
 
     .node-main-login > .main form .cbi-value-field input {
@@ -2317,6 +2363,14 @@ footer {
     .node-main-login form .cbi-value-field .iconeye {
         left: auto;
         right: 12px;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .PC-hide {
+        display: inline-block;
     }
 }
 
@@ -2364,10 +2418,6 @@ footer {
         font-size: 10px;
     }
 
-    .mobile-hide {
-        display: none;
-    }
-
     .panel-title {
         font-size: 1.4rem;
         padding-bottom: 1rem;
@@ -2392,6 +2442,7 @@ footer {
         font-family: inherit;
         min-width: inherit;
         background-color: #FFF;
+        border-radius: 20px;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -2402,6 +2453,10 @@ footer {
 
     .node-status-iptables > .main div > .cbi-map > form input[type="submit"] + input[type="submit"] {
         margin-top: 1rem;
+    }
+
+    .node-main-login > .main .container {
+        min-width: 90%;
     }
 
     .th, .td {
@@ -2437,7 +2492,7 @@ footer {
     }
 
     .alert-message {
-        padding: 8px 5%;
+        padding: 8px 10%;
     }
 }
 
