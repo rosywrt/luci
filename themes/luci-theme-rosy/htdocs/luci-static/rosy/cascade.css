@@ -423,7 +423,6 @@ td > table > tbody > tr > td,
 .btn, .cbi-button {
     margin: 0 .8rem .5rem 0;
     -webkit-appearance: none;
-    text-transform: uppercase;
     color: rgba(0, 0, 0, 0.87);
     background-color: #F0F0F0;
     transition: all 0.2s ease-in-out;
@@ -574,7 +573,7 @@ td > table > tbody > tr > td,
 .tabs > li[class~="active"],
 .tabs > li:hover {
     cursor: pointer;
-    background-color: #0099CC;
+    background-color: #337ab7;
 }
 
 .tabs > li[class~="active"] > a,
@@ -646,7 +645,6 @@ td > table > tbody > tr > td,
 }
 
 .cbi-value {
-    padding: .5rem 0;
     display: inline-block;
     width: 100%;
 }
@@ -1749,7 +1747,7 @@ footer {
 
 /* The style of the prompt message */
 .alert-message {
-    padding: 20px 15%;
+    padding: 13px 11%;
     border-radius: 10px;
     background-color: #FFF;
 }
@@ -1769,26 +1767,26 @@ footer {
 }
 
 .alert-message > h4 {
-    padding: 17px 0 17px 36px;
+    padding: 7px 0 7px 36px;
     margin: 0;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 18px;
     background: url(./no-pwd.png) no-repeat left 43%/ 28px;
     display: inline-block;
 }
 
 .alert-message > p {
-    font-size: 16px;
-    line-height: 2rem;
+    font-size: 14px;
+    line-height: 1.5rem;
 }
 
 .alert-message a {
-    padding: 8px 0;
-    margin-top: 17px;
+    padding: 4px 0;
+    margin-top: 12px;
     width: 100%;
     background-color: transparent;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     border: 1px solid #fff;
     border-radius: 50px;
 }
@@ -1817,8 +1815,12 @@ footer {
 }
 
 .node-main-login > .main #maincontent {
-    padding: 3rem 0 2rem;
+    position: absolute;
+    min-width: 492px;
     width: 100%;
+    top: 47%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     height: auto;
     text-align: center;
 }
@@ -1826,16 +1828,19 @@ footer {
 .node-main-login > .main .container {
     padding: 0;
     width: 30%;
-    max-width: 600px;
+    max-width: 492px;
     display: inline-block;
 }
 
 .node-main-login > .main .logoImg a {
-    margin: 0 0 20px 0;
+    margin: 0 0 18px 0;
     display: block;
-    font-size: 36px;
+    font-size: 30px;
     color: #fff;
     text-decoration: none;
+}
+.node-main-login > .main .logoImg img:first-child {
+    width: 72px;
 }
 
 .node-main-login .warning {
@@ -1844,7 +1849,7 @@ footer {
 }
 
 .node-main-login > .main form h2 {
-    margin: 20px 0 16px;
+    margin: 17px 0;
     padding: 0;
     font-size: 24px;
     color: #fff;
@@ -1853,7 +1858,7 @@ footer {
 }
 
 .node-main-login > .main form .cbi-map-descr {
-    margin: 16px 0 13px;
+    margin: 0 0 12px;
     padding: 0;
     font-size: 12px;
     color: #B1B6BB;
@@ -1877,7 +1882,7 @@ footer {
 }
 
 .node-main-login > .main form .cbi-value-field {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     display: block;
     width: 100%;
     position: relative;
@@ -1887,7 +1892,7 @@ footer {
     padding-left: 48px;
     width: 100%;
     border: 1px solid #556270;
-    height: 48px;
+    height: 42px;
     border-radius: 50px;
     font-size: 20px;
     color: #9c9fa1;
@@ -2300,16 +2305,21 @@ footer {
     .node-main-login > .main #maincontent {
         padding-top: 0;
         padding-bottom: 1rem;
+        min-width: 100%;
+        top: 0;
+        transform: translateY(0) translateX(-50%);
     }
 
     .alert-message {
         padding: 8px 15%;
     }
 
-    .alert-message > h4,
+    .alert-message > h4{
+        font-size: 14px;
+    }
     .alert-message > p,
     .alert-message a {
-        font-size: 14px;
+        font-size: 12px;
     }
     .a
     lert-message > h4 {
