@@ -616,6 +616,9 @@ msgstr ""
 msgid "Checksum"
 msgstr "Suma de verificare"
 
+msgid "Choose mtdblock"
+msgstr ""
+
 msgid ""
 "Choose the firewall zone you want to assign to this interface. Select "
 "<em>unspecified</em> to remove the interface from the associated zone or "
@@ -640,6 +643,11 @@ msgstr ""
 msgid ""
 "Click \"Generate archive\" to download a tar archive of the current "
 "configuration files."
+msgstr ""
+
+msgid ""
+"Click \"Save mtdblock\" to download specified mtdblock file. (NOTE: THIS "
+"FEATURE IS FOR PROFESSIONALS! )"
 msgstr ""
 
 msgid "Client"
@@ -981,6 +989,9 @@ msgstr "Descarca si instaleaza pachetul"
 
 msgid "Download backup"
 msgstr "Descarca backup"
+
+msgid "Download mtdblock"
+msgstr ""
 
 msgid "Downstream SNR offset"
 msgstr ""
@@ -2872,6 +2883,12 @@ msgstr "Salveaza"
 
 msgid "Save & Apply"
 msgstr "Salveaza si aplica"
+
+msgid "Save mtdblock"
+msgstr ""
+
+msgid "Save mtdblock contents"
+msgstr ""
 
 msgid "Scan"
 msgstr "Scan"
