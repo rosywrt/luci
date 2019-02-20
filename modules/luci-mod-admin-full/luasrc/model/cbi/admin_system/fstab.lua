@@ -121,10 +121,10 @@ unmount.render = function(self, section, scope)
 	if non_system_mounts[section].umount then
 		self.title = translate("Unmount")
 		self.inputstyle = "remove"
-        	Button.render(self, section, scope)
 	else
-		luci.http.write("&#160;")
+		self.inputstyle = "placeholder"
 	end
+	Button.render(self, section, scope)
 end
 
 unmount.write = function(self, section)
